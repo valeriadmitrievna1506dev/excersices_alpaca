@@ -75,10 +75,10 @@ console.log(`sum of new array: ${array}`);
 // и подмассивы, например [1, 2, [3, 4], 5, [6, 7]].
 // Оставьте в нем только подмассивы.
 
-array = [1, 2, [3, 4], 5, [6, 7, 8]];
+array = [1, 7, 4, {a: 4}, 6, 2, [3, 4], 5, [6, 7, 8], 'hey'];
 console.log(`6. start array: `, array);
-array = array.filter((item) => typeof item === 'object');
-console.log('output array: ', array);
+array = array.filter((item) => Array.isArray(item));
+console.log('output subarrays: ', array);
 
 // Дана строка
 
