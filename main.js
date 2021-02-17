@@ -9,6 +9,13 @@ array = array.map((elem) => {
   return elem * elem;
 });
 console.log(`new array: ${[...array]}`);
+// одним действием:
+// array = [1, 2, 5, 4, 9].map((elem) => {
+//   return elem * elem;
+// });
+// далее можно во многих местах сделать
+// так же, но я всё красиов по очереди
+// вывожу в консоль
 
 // #2
 // Верните массив, состоящий только из
@@ -81,11 +88,11 @@ console.log('output array: ', array);
 
 let string = ' hey  its my beautiful  string ';
 console.log(`7. start string: ${string}`);
-string = string.trim().replace(/[ ]{1,}/g, ' ')
-string = string.split(' ')
-let words4Count = 0
-string.forEach(element => {
-    if (element.length > 4) words4Count++
+string = string.trim().replace(/[ ]{1,}/g, ' ');
+string = string.split(' ');
+let words4Count = 0;
+string.forEach((element) => {
+  if (element.length > 4) words4Count++;
 });
 console.log(`count of words that longer than 4: ${words4Count}`);
 
